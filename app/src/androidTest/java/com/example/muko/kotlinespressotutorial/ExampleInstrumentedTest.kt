@@ -34,13 +34,13 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.muko.kotlinespressotutorialll", appContext.packageName)
+        assertEquals("com.example.muko.kotlinespressotutorial", appContext.packageName)
     }
     @Test
     fun checkCorrectly() {
-        onView(withId(R.id.edtName)).perform(typeText("CB"))
+        onView(withId(R.id.edtName)).perform(typeText("Mukaddes"))
         onView(withId(R.id.edtPass)).perform(typeText("123456"))
-        onView(withId(R.id.edtMail)).perform(typeText("c.basat"))
+        onView(withId(R.id.edtMail)).perform(typeText("m.ddemirtas"))
         onView(withId(R.id.tvMessage)).check(matches(withText("Hello Espresso!")))
         onView(withId(R.id.spEmail)).perform(click())
         onData(anything()).atPosition(1).perform(click())
